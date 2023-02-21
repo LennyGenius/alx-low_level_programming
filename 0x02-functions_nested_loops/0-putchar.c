@@ -1,4 +1,4 @@
-#include "_putchar.h"
+#include "main.h"
 
 /**
  * main - Print "_putchar" followed by a new line.
@@ -7,12 +7,12 @@
  */
 int main(void)
 {
-	char _putchar[8] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r', 't'};
-	unsigned int c;
+	char var[8] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
+	unsigned int i;
 
-	for (c = 0; c < sizeof(_putchar); c++)
+	for (i = 0; c < sizeof(var); i++)
 	{
-		_putchar(_putchar[c]);
+		_putchar(var[i]);
 	}
 _putchar('\n');
 return (0);
