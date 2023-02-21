@@ -1,19 +1,19 @@
+#include <unistd.h>
 #include "main.h"
 
 /**
- * main - Print "_putchar" followed by a new line.
- * Description: You are not allowed to include standard libraries.
- * Return: 0
+ * main - Check description
+ * Description: It prints the word _putchar, followed by a new line.
+ * Return: 0.
  */
 int main(void)
 {
-	char var[8] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
-	unsigned int i;
+	char var[8] = "_putchar";
+	int i;
 
-	for (i = 0; c < sizeof(var); i++)
-	{
+	for (i = 0; i < 8; i++)
 		_putchar(var[i]);
-	}
-_putchar('\n');
-return (0);
+	_putchar('\n');
+
+	return (0);
 }
