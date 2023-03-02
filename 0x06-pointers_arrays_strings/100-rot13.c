@@ -2,14 +2,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include "main.h"
 /**
  * rot13 -  a function that encodes a string using rot13.
  * @s: An input string to encode using rot13
  * Return: An encode string
  */
 
-char *rot13(const char *src)
+char *rot13(char *);
 {
     if(src == NULL){
       return NULL;
