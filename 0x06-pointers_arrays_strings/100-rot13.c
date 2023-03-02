@@ -1,39 +1,24 @@
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "main.h"
+
 /**
- * rot13 -  a function that encodes a string using rot13.
- * @s: An input string to encode using rot13
- * Return: An encode string
+ * rot13 - rotate characters 13 places in the alphabet
+ * @s: string
+ * Return: string `s` rotated
  */
 
-char *rot13(char *);
+char *rot13(char *s)
 {
-    if(src == NULL){
-      return NULL;
-    }
-  
-    char* result = malloc(strlen(src));
-    
-    if(result != NULL){
-      strcpy(result, src);
-      char* current_char = result;
-      
-      while(*current_char != '\0'){
-        //Only increment alphabet characters
-        if((*current_char >= 97 && *current_char <= 122) || (*current_char >= 65 && *current_char <= 90)){
-          if(*current_char > 109 || (*current_char > 77 && *current_char < 91)){
-            //Characters that wrap around to the start of the alphabet
-            *current_char -= 13;
-          }else{
-            //Characters that can be safely incremented
-            *current_char += 13;
-          }
-        }
-        current_char++;
-      }
-    }
-    return result;
+	int i;
+	char storeh[] = "NOPQRSTUVWXYZABCDEFGHIJKLM";
+	char storel[] = "nopqrstuvwxyzabcdefghijklm";
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		if ((s[i] > 64 && s[i] < 91) || (s[i] > 96 && s[i] < 123))
+		{
+			s[i] = (s[i] - 65 > 25) ?
+				storel[s[i] - 97] : storeh[s[i] - 65];
+		}
+	}
+	return (s);
 }
