@@ -1,5 +1,6 @@
 #include "variadic_functions.h"
 #include <stdio.h>
+#include <stdarg.h>
 
 /**
  * print_numbers - print each number with separator, followed by a newline
@@ -23,4 +24,3 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_end(list);
 }
-
